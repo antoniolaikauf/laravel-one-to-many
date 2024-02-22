@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('types', function (Blueprint $table) {
             $table->id();
-
+            // creazione della tabella types che si si collegherà con projects
             $table->boolean('in_gruppo');
             $table->string('risorse_usate');
 

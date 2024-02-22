@@ -14,6 +14,7 @@
             <div>
                 {{$project->nome}}
             </div>
+            <!-- qua non si fa un ciclo essendo che i progetti faranno riferimento ad un solo type quindi non ritornerà un array  -->
             {{$project->type->risorse_usate}}
         </li>
         @endforeach

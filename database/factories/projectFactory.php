@@ -16,10 +16,11 @@ class projectFactory extends Factory
      */
     public function definition()
     {
+        // factory rimangono uguale si mettono il nome delle colonne a cui devono riferirsi e si specifica quali dati mettere all'interno
         return [
-            'nome'=>fake()->word(),
-            'inizio_progetto'=>fake()->date(),
-            'descrizione'=>fake()->paragraph(),
+            'nome' => fake()->word(),
+            'inizio_progetto' => fake()->date(),
+            'descrizione' => fake()->paragraph(),
         ];
     }
 }

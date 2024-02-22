@@ -12,6 +12,9 @@
         @foreach($types as $type)
         <li class="my-3">
             <div>
+                gruppo di progetti n:{{$type->id}}
+            </div>
+            <div>
                 risorse usate per questoprogetto :{{$type->risorse_usate}}
             </div>
 
@@ -26,6 +29,8 @@
             </span>
             @endif
             <ul>
+                <!-- qua si fa un altro ciclo essendo che ci saranno diversi progetti per ogni type 
+            e la tabella sarà dentro type  -->
                 @foreach($type-> projects as $project)
                 <li>
                     nome progetto: {{$project->nome}}
