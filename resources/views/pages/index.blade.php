@@ -12,7 +12,7 @@
         @foreach($types as $type)
         <li class="my-3">
             <div>
-                {{$type->risorse_usate}}
+                risorse usate per questoprogetto :{{$type->risorse_usate}}
             </div>
 
             @if($type->in_gruppo)
@@ -20,10 +20,21 @@
                 progetto fatto in gruppo
             </span>
             @endif
+            @if(!$type->in_gruppo)
+            <span>
+                progetti fatto singolarmente
+            </span>
+            @endif
             <ul>
                 @foreach($type-> projects as $project)
                 <li>
-                    {{$project->nome}}
+                    nome progetto: {{$project->nome}}
+                    <div>
+                        data inizio del progetto: {{$project->inizio_progetto}}
+                    </div>
+                    <div>
+                        descrizione del progetto: {{$project->descrizione}}
+                    </div>
                 </li>
                 @endforeach
             </ul>

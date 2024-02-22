@@ -17,8 +17,8 @@ class typeFactory extends Factory
     public function definition()
     {
         return [
-            'in_gruppo'=>fake()->boolean(),
-            'risorse_usate'=>fake()->word(),
+            'in_gruppo' => fake()->boolean(),
+            'risorse_usate' => fake()->randomElement(['umane', 'strumentali ', 'finanziare']),
         ];
     }
 }
