@@ -5,6 +5,7 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 
+
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\project>
  */
@@ -17,8 +18,12 @@ class projectFactory extends Factory
      */
     public function definition()
     {
+
         return [
-            
+
+            'nome' => fake()->words(3, true),
+            'inizio_progetto' => fake()->date(),
+            'descrizione' => fake()->paragraph(),
         ];
     }
 }
