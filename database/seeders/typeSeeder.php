@@ -5,6 +5,10 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
+use App\Models\type;
+
+use function PHPSTORM_META\type;
+
 class typeSeeder extends Seeder
 {
     /**
@@ -14,6 +18,6 @@ class typeSeeder extends Seeder
      */
     public function run()
     {
-        //
+        type::factory()->count(7)->create();
     }
 }
